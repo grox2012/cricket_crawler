@@ -114,7 +114,7 @@ for i in range(0, len(config_list) - 2):
     fout = open("data" + str(i) + ".html", "w")
     fout.write(data)
     fout.close()
-    data_matcher = re.compile(r"\d+\w+ of 2.5GB Used")
+    data_matcher = re.compile(r"\d+\.?\d*\w+ of 2.5GB Used")
     match = data_matcher.search(data)
     if match:
         print config_list[i+2]
